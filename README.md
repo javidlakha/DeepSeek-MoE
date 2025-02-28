@@ -129,7 +129,7 @@ You can directly employ [Huggingface's Transformers](https://github.com/huggingf
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
-model_name = "deepseek-ai/deepseek-ai/deepseek-moe-16b-base"
+model_name = "deepseek-ai/deepseek-moe-16b-base"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="auto")
 model.generation_config = GenerationConfig.from_pretrained(model_name)
